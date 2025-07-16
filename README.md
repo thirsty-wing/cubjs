@@ -4,7 +4,7 @@ Manipulate the DOM with the "just right" amount of abstraction.
 
 ## Example
 
-```javascript
+```JavaScript
 function sayHello() {
   console.log("Hello CubJS");
 }
@@ -62,7 +62,7 @@ const table = elementCreate("div");
 table.id = "table";
 
 // insert the "table" after the "honeypot"
-afterEnd(honeypot, rock);
+afterEnd(honeypot, table);
 
 // what's this doing here?
 elementRemove(select("#rock"));
@@ -89,10 +89,8 @@ In C, there are no objects to which methods can be attached. Instead, structs ar
 
 The lack of classes is something many C programmers consider the "just right" 🐻 amount of abstraction.
 
-Although CubJS is not passing raw javascript objects around as a first argument, it follows the pattern instead passing elements as the first argument. If you are used to C-style programming, you'll feel right at home.
+Although CubJS is not passing raw JavaScript objects around as a first argument, it follows the pattern instead passing elements as the first argument. If you are used to C-style programming, you'll feel right at home.
 
-### Acknowledgements
+### Observations
 
-- This library will not improve performance of your application. It will instead add a tiny, though negligible, amount of overhead due to wrapping functions.
-- Since function invocations are smaller than their original counterparts, there is a potential to ship less total javascript to the browser if there is a large amount of DOM manipulation.
-- This library adds abstraction in order provide an experience of less abstraction.
+- Since function invocations are smaller than their original counterparts, there is a potential to ship less total JavaScript to the browser if there is a large amount of DOM manipulation.
